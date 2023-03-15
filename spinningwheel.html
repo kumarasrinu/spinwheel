@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>spinningwheel</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            transition: all 0.2s;
+        }
+        body{
+            width:100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        img{
+            width: 500px;
+        }
+        #a{
+            position: absolute;
+            width:200px;
+            height:50px;
+            left:20px;
+            top: 200px;
+
+        }
+        #result{
+            position: absolute;
+            right: 150px;
+            font-size: 120px;
+        }
+    </style>
+</head>
+<body>
+    <input  id="a" type="button" value="spin" onclick="spin()">
+    <img src="./spinnigwheel.png" id="b">
+    <h1 id="result"> <=</h1>
+    <script>
+        function spin()
+        {
+            var randomnumber=Math.floor(Math.random()*1000)
+            document.getElementById("b").style.rotate=randomnumber+"deg"
+        }
+    </script>
+</body>
+</html>
